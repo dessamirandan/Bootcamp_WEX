@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 //Estrutura básica de uma classe
-namespace Bootcamp_WEX.models
+namespace Bootcamp.models
 {
     public class Pessoa //classe é uma representacao de objetos do mundo real.
     {
