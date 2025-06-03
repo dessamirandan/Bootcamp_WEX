@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk"> <!--Define que esse projeto usa o SDK da Microsoft para .NET | APPS console e bibliotecas-->
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType> <!--tipo do arquivo-->
+    <TargetFramework>net9.0</TargetFramework> <!--versao do .net skd-->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
+
+<!--Informações descritivas do projeto
+arquivo XML usado pelo .NET (principalmente com o SDK da Microsoft) para definir as configurações de build, dependências e estrutura de um projeto C#
+-->
