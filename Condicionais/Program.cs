@@ -1,9 +1,23 @@
-﻿int idade = int.Parse(Console.ReadLine());
+﻿int quantidadeEmEstoque = 3;
+Console.Write("Insira a quantidade de compras realizadas: ");
+int quantidadeCompra = int.Parse(Console.ReadLine());
+bool possivelVenda = quantidadeCompra > 0 && quantidadeEmEstoque >= quantidadeCompra; //
 
-if (idade > 17)
+Console.WriteLine($"Quantidade em estoque: {quantidadeEmEstoque}");
+Console.WriteLine($"Quantidade compra: {quantidadeCompra}");
+Console.WriteLine($"é possível realizar a venda? {possivelVenda}");
+
+if (quantidadeCompra == 0)
 {
-  Console.WriteLine("Você é maior de idade!");
-} else
-{
-  Console.WriteLine("Você ainda é menor de idade!");
+  Console.WriteLine("Você não realizou nenhuma compra hoje!");
 }
+else if (possivelVenda)
+{
+  Console.WriteLine("Venda realizada!");
+}
+else
+{
+  Console.WriteLine("Desculpe, não temos a quantidade solicitada em estoque.");
+}
+
+ Console.ReadLine();
