@@ -35,7 +35,7 @@ O Boot Camp oferece um caminho completo para desenvolver habilidades de engenhar
 
 .sln: Contém informações que carregam um agrupamento de projetos.
 
-![Exemplo de Estrutura](https://drive.google.com/file/d/10xeDphJAXM5r1ubRbNDO9PWRiPiAETe_/view?usp=sharing)
+![Exemplo de Estrutura](https://drive.google.com/uc?export=view&id=10xeDphJAXM5r1ubRbNDO9PWRiPiAETe_)
 
 
 
