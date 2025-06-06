@@ -30,6 +30,17 @@ O Boot Camp oferece um caminho completo para desenvolver habilidades de engenhar
 
 ---
 
+## Arquivos de ambientes c#
+.csproj: Contém informações referente a um projeto (build, debug, versão).
+
+.sln: Contém informações que carregam um agrupamento de projetos.
+
+![Exemplo de Estrutura](https://drive.google.com/file/d/10xeDphJAXM5r1ubRbNDO9PWRiPiAETe_/view?usp=sharing)
+
+
+
+---
+
 ## Próximos passos
 
 - Avançar nas aulas intermediárias e avançadas de C#
