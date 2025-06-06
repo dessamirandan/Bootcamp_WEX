@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operadores", "Operadores\Op
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aritmeticos", "Aritmeticos\Aritmeticos.csproj", "{97C66DCA-11E4-4AEB-BBF0-600D1884D2A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "For", "For\For.csproj", "{990DA676-6089-4012-B2C0-7510A45DDACA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repeticao", "Repeticao\Repeticao.csproj", "{E2EF57B3-3D45-4751-A8DA-FA6B085E4FFD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuInterativo", "MenuInterativo\MenuInterativo.csproj", "{C10BAAFB-83FA-4E5A-89EF-3F82DA8C421F}"
