@@ -26,3 +26,6 @@ DateTime dataAtual = DateTime.Now;
 Console.WriteLine("Hoje é: " + dataAtual);
 
 Console.WriteLine("O mês é: " + dataAtual.ToString("MMMM")); //exibe mês por extenso
+
+int a = Convert.ToInt32("5");
+double b = double.Parse("3.2");
