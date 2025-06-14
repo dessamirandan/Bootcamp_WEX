@@ -3,1082 +3,495 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apostila .NET e C#</title>
+    <title>Apostila Completa: Fundamentos de .NET e C# para Desenvolvedores Júnior</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <h1>Apostila .NET e C#</h1>
-        <p>Desvendando o universo da plataforma Microsoft</p>
+        <h1>Apostila Completa: Fundamentos de .NET e C# para Desenvolvedores Júnior</h1>
+        <p>Sua Jornada no Desenvolvimento com a Plataforma Microsoft</p>
     </header>
 
     <div class="container">
         <nav class="sidebar">
+            <h2>Sumário</h2>
             <ul>
-                <li><a href="#introducao-net">Introdução ao .NET</a></li>
-                <li><a href="#csharp-inicio">C# - Primeiros Passos</a></li>
-                <li><a href="#estruturas-controle">Estruturas de Controle e Repetição</a></li>
-                <li><a href="#organizacao-programa">Organização de um Programa C#</a></li>
-                <li><a href="#arrays-listas">Array e Listas</a></li>
-                <li><a href="#boas-praticas">Comentários e Boas Práticas</a></li>
-                <li><a href="#manipulando-valores">Manipulando Valores</a></li>
-                <li><a href="#excecoes-colecoes">Exceções e Coleções</a></li>
-                <li><a href="#oop">POO com C#</a></li>
-                <li><a href="#introducao-abstracao-encapsulamento">Introdução, Abstração e Encapsulamento</a></li>
-                <li><a href="#heranca-polimorfismo">Herança e Polimorfismo</a></li>
-                <li><a href="#classes-abstrata-interfaces">Classes Abstratas e Interfaces</a></li>
-                <li><a href="#api-intro">Introdução a APIs</a></li>
+                <li><a href="#introducao-net">1. Introdução à Plataforma .NET e C#</a></li>
+                <li><a href="#csharp-inicio">2. C# - Primeiros Passos: Sintaxe, Variáveis e Operadores</a></li>
+                <li><a href="#estruturas-controle">3. Estruturas de Controle de Fluxo</a></li>
+                <li><a href="#organizacao-programa">4. Organização do Código: Namespaces, Classes e Métodos</a></li>
+                <li><a href="#arrays-listas">5. Arrays, Listas e Coleções Genéricas</a></li>
+                <li><a href="#boas-praticas">6. Comentários e Boas Práticas de Código</a></li>
+                <li><a href="#manipulando-valores">7. Manipulando Valores e Conversão de Tipos</a></li>
+                <li><a href="#excecoes-colecoes">8. Tratamento de Exceções</a></li>
+                <li><a href="#oop">9. Programação Orientada a Objetos (POO) com C#</a></li>
+                <li><a href="#api-intro">10. Introdução a APIs e Desenvolvimento Web Básico com .NET</a></li>
+                <li><a href="#projetos-praticos">Projetos Práticos Guiados</a></li>
+                <li><a href="#glossario">Glossário Técnico</a></li>
             </ul>
         </nav>
 
         <main class="content">
-            <section id="introducao-net">
-                <h2>1. Introdução à Plataforma .NET</h2>
-                <p>A plataforma .NET é um framework de desenvolvimento de software gratuito e de código aberto, criado pela Microsoft, utilizado para construir uma ampla variedade de aplicações. Desde aplicações web e móveis até serviços de backend, jogos e aplicações desktop, o .NET oferece um ambiente robusto e versátil para desenvolvedores.</p>
+            <section id="introducao-net" class="chapter">
+                <h2>1. Introdução à Plataforma .NET e C#</h2>
+                <p>
+                    Bem-vindo(a) à sua porta de entrada para o mundo do desenvolvimento de software com a plataforma **.NET** e a linguagem **C# (C Sharp)**! Esta apostila foi cuidadosamente elaborada para ser seu guia completo, prático e atualizado, ideal para quem está começando e deseja construir uma base sólida para se tornar um desenvolvedor júnior de sucesso.
+                </p>
+                <p>
+                    O universo da programação é vasto e dinâmico, e escolher uma tecnologia robusta e amplamente utilizada é um passo fundamental. A plataforma .NET, criada e mantida pela Microsoft, junto com C#, oferece um ecossistema poderoso, versátil e com vasta documentação, sendo uma das escolhas mais populares para o desenvolvimento de aplicações corporativas, web, mobile, jogos e muito mais.
+                </p>
 
-                <h3>1.1. Histórico e Versões</h3>
-                <p>A história do .NET começou no início dos anos 2000 com o lançamento do **.NET Framework**. Inicialmente focado em Windows, ele se tornou uma plataforma dominante para o desenvolvimento de aplicações empresariais nesse ecossistema.</p>
-                <p>Com o tempo, a Microsoft percebeu a necessidade de uma plataforma mais leve, modular e multiplataforma. Isso levou ao surgimento do **.NET Core** em 2016. O .NET Core era uma reescrita do .NET Framework, projetada para ser de código aberto, modular e capaz de rodar em Windows, Linux e macOS.</p>
-                <p>Em 2020, o .NET Framework e o .NET Core foram unificados sob um único nome: **.NET** (a partir da versão .NET 5). Essa unificação representa o futuro da plataforma, combinando o melhor dos dois mundos: a vasta API do .NET Framework com a modularidade e a capacidade multiplataforma do .NET Core.</p>
-
-                <h3>1.2. Principais Diferenças entre .NET Framework e .NET (Core)</h3>
+                <h3>1.1. O Que é .NET?</h3>
+                <p>
+                    A plataforma **.NET** é um framework (estrutura) de desenvolvimento de software **gratuito e de código aberto**, utilizado para construir uma ampla variedade de aplicações. Pense nele como um grande conjunto de ferramentas, bibliotecas e um ambiente de execução que permite aos desenvolvedores criar diversos tipos de sistemas de forma eficiente e segura.
+                </p>
+                <p>
+                    Desde aplicações web de alta performance com **ASP.NET Core**, aplicativos desktop modernos com **WPF** ou **Windows Forms** (e mais recentemente **MAUI** para multiplataforma), até serviços de backend robustos, jogos com a **Unity**, e soluções de inteligência artificial ou machine learning, o .NET oferece um ambiente robusto e versátil.
+                </p>
+                <h4>Evolução do .NET: Do Framework ao Multiplataforma</h4>
+                <p>A história do .NET é marcada por uma evolução contínua para atender às demandas do mercado:</p>
                 <ul>
-                    <li><strong>Plataforma:</strong>
-                        <ul>
-                            <li><strong>.NET Framework:</strong> Exclusivamente para Windows.</li>
-                            <li><strong>.NET (Core):</strong> Multiplataforma (Windows, Linux, macOS).</li>
-                        </ul>
+                    <li>
+                        <strong>.NET Framework (Início dos Anos 2000):</strong> A versão original, dominante para o desenvolvimento de aplicações empresariais e desktop no ecossistema Windows. Era proprietário e limitado ao Windows.
                     </li>
-                    <li><strong>Código-fonte:</strong>
-                        <ul>
-                            <li><strong>.NET Framework:</strong> Proprietário (com algumas partes de código aberto).</li>
-                            <li><strong>.NET (Core):</strong> Totalmente de código aberto e mantido pela Microsoft e pela comunidade.</li>
-                        </ul>
+                    <li>
+                        <strong>.NET Core (2016):</strong> Uma reescrita revolucionária. Desenvolvido para ser **código aberto**, **modular**, e, o mais importante, **multiplataforma** (rodando em Windows, Linux e macOS). Focado em performance e cenários de nuvem.
                     </li>
-                    <li><strong>Performance:</strong>
-                        <ul>
-                            <li><strong>.NET (Core):</strong> Geralmente oferece melhor desempenho devido a otimizações e uma arquitetura mais leve.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Modularidade:</strong>
-                        <ul>
-                            <li><strong>.NET (Core):</strong> Altamente modular, permitindo que os desenvolvedores incluam apenas as dependências necessárias para suas aplicações.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Desenvolvimento Cloud-Native:</strong>
-                        <ul>
-                            <li><strong>.NET (Core):</strong> Mais adequado para desenvolvimento de microsserviços, contêineres (Docker) e aplicações nativas da nuvem.</li>
-                        </ul>
+                    <li>
+                        <strong>.NET (a partir da versão .NET 5 em 2020):</strong> A unificação! A Microsoft consolidou o .NET Framework e o .NET Core sob um único nome, simplesmente **.NET**. Essa unificação representa o futuro da plataforma, combinando a vasta API do .NET Framework com a modularidade, o código aberto e a capacidade multiplataforma do .NET Core. É nesta versão moderna que focaremos nossos estudos.
                     </li>
                 </ul>
+                <p>
+                    **Por que essa evolução é importante?** A versão unificada do .NET oferece aos desenvolvedores a flexibilidade de construir aplicações que rodam em qualquer sistema operacional, aproveitando os benefícios de performance, modularidade e a vasta comunidade de código aberto.
+                </p>
 
-                <h3>1.3. Linguagens e Paradigmas</h3>
-                <p>A plataforma .NET é **agnóstica à linguagem**, o que significa que você pode desenvolver aplicações usando diversas linguagens que compilam para o Intermediate Language (IL) do .NET. As principais linguagens são:</p>
+                <h3>1.2. O Que é C#?</h3>
+                <p>
+                    **C# (pronuncia-se "C Sharp")** é a linguagem de programação primária e mais popular para desenvolvimento na plataforma .NET. Criada pela Microsoft, é uma linguagem:
+                </p>
                 <ul>
-                    <li><strong>C# (C Sharp):</strong> A linguagem primária e mais popular para desenvolvimento .NET, desenvolvida pela Microsoft.</li>
-                    <li><strong>F# (F Sharp):</strong> Uma linguagem funcional que também roda na plataforma .NET, excelente para análise de dados e programação assíncrona.</li>
-                    <li><strong>VB.NET (Visual Basic .NET):</strong> Uma evolução do Visual Basic clássico, mantendo a sintaxe mais verbosa e focada em facilidade de uso, embora menos utilizada em novos projetos.</li>
+                    <li>
+                        **Moderna:** Possui recursos avançados e está em constante evolução, incorporando as melhores práticas de outras linguagens.
+                    </li>
+                    <li>
+                        **Orientada a Objetos (POO):** Seu design é centrado em classes, objetos e princípios como herança, polimorfismo, encapsulamento e abstração, o que facilita a organização, a reutilização e a manutenção do código.
+                    </li>
+                    <li>
+                        **Fortemente Tipada:** Toda variável deve ter um tipo de dado definido (ex: número inteiro, texto, booleano), o que ajuda a prevenir erros em tempo de compilação e torna o código mais robusto.
+                    </li>
+                    <li>
+                        **De Propósito Geral:** Pode ser usada para desenvolver uma vasta gama de aplicações, como mencionado na seção anterior.
+                    </li>
                 </ul>
-                <p>Em termos de paradigmas de programação, o .NET e as linguagens associadas (especialmente C#) suportam múltiplos paradigmas:</p>
+                <p>
+                    A sintaxe do C# é elegante e, para quem já teve contato com linguagens como Java ou C++, encontrará muitas semelhanças, o que facilita o aprendizado.
+                </p>
+
+                <h3>1.3. Por Que Aprender .NET e C#? (Importância no Mercado de Trabalho)</h3>
+                <p>
+                    Aprender .NET e C# é um investimento estratégico para sua carreira no desenvolvimento de software pelas seguintes razões:
+                </p>
                 <ul>
-                    <li><strong>Programação Orientada a Objetos (POO):</strong> É o paradigma predominante, com conceitos como classes, objetos, herança, polimorfismo, encapsulamento e abstração sendo fundamentais.</li>
-                    <li><strong>Programação Funcional:</strong> Embora C# seja primariamente orientado a objetos, ele tem incorporado muitos recursos de programação funcional, como lambdas, LINQ (Language Integrated Query) e imutabilidade. F# é uma linguagem primariamente funcional.</li>
-                    <li><strong>Programação Imperativa:</strong> O estilo mais básico de programação, onde você fornece instruções passo a passo para o computador executar.</li>
-                    <li><strong>Programação Genérica:</strong> Permite escrever código que funciona com diferentes tipos de dados sem precisar reescrevê-lo para cada tipo.</li>
-                </ul>
-                <h4>Bibliografia Recomendada:</h4>
-                <ul>
-                    <li>Microsoft Docs: <a href="https://docs.microsoft.com/pt-br/dotnet/" target="_blank">docs.microsoft.com/pt-br/dotnet/</a></li>
-                    <li>"CLR via C#" por Jeffrey Richter (para aprofundamento na plataforma .NET e CLR)</li>
-                </ul>
-            </section>
-
-            ---
-
-            <section id="csharp-inicio">
-                <h2>2. C# - Primeiros Passos</h2>
-                <p>C# (pronuncia-se "C Sharp") é uma linguagem de programação moderna, orientada a objetos e de propósito geral, desenvolvida pela Microsoft como parte de sua iniciativa .NET. É amplamente utilizada para desenvolver uma vasta gama de aplicações, incluindo:</p>
-                <ul>
-                    <li>Aplicações Web (ASP.NET Core)</li>
-                    <li>Aplicações Desktop (WPF, Windows Forms, MAUI)</li>
-                    <li>Aplicações Mobile (Xamarin, MAUI)</li>
-                    <li>Jogos (Unity)</li>
-                    <li>Serviços de Backend e APIs</li>
-                    <li>Computação em Nuvem (Azure)</li>
-                    <li>Inteligência Artificial e Machine Learning</li>
-                </ul>
-
-                <h3>2.1. Sintaxe Básica</h3>
-                <p>A sintaxe do C# é fortemente influenciada por C++ e Java, sendo relativamente fácil de aprender para quem já conhece essas linguagens. Aqui estão alguns conceitos básicos:</p>
-
-                <h4>Estrutura de um Programa C#</h4>
-                <pre><code class="language-csharp">
-using System; // Importa o namespace System, que contém funcionalidades básicas
-
-namespace MeuPrimeiroPrograma
-{
-    class Program
-    {
-        static void Main(string[] args) // Método de entrada do programa
-        {
-            Console.WriteLine("Olá, Mundo!"); // Exibe uma mensagem no console
-        }
-    }
-}
-                </code></pre>
-                <ul>
-                    <li>`using System;`: Importa **namespaces** para usar classes e funcionalidades sem qualificar totalmente seus nomes (ex: `Console` em vez de `System.Console`).</li>
-                    <li>`namespace`: Ajuda a organizar o código e evitar conflitos de nomes.</li>
-                    <li>`class`: Todos os códigos C# estão contidos dentro de classes.</li>
-                    <li>`Main`: O método `Main` é o ponto de entrada de qualquer aplicação C#. É o primeiro método a ser executado.</li>
-                    <li>`Console.WriteLine()`: Um método usado para imprimir texto na saída padrão (geralmente o console).</li>
-                    <li>`//`: Comentário de uma linha.</li>
-                    <li>`/* ... */`: Comentário de múltiplas linhas.</li>
+                    <li>
+                        **Alta Demanda no Mercado:** Empresas de todos os portes, desde startups a grandes corporações, utilizam .NET para seus sistemas críticos. Há uma demanda consistente por profissionais qualificados em C#.
+                    </li>
+                    <li>
+                        **Ecossistema Completo:** Além da linguagem e do framework, a Microsoft oferece um conjunto completo de ferramentas (como o **Visual Studio** e **Visual Studio Code**), serviços de nuvem (**Azure**) e uma vasta documentação de alta qualidade, facilitando o desenvolvimento e a implantação.
+                    </li>
+                    <li>
+                        **Versatilidade:** Com .NET e C#, você pode atuar em diversas frentes: desenvolvimento web (front-end e back-end), desktop, mobile, jogos, microsserviços, IoT, inteligência artificial e até mesmo blockchain. Isso significa mais oportunidades de carreira e flexibilidade para escolher sua área de atuação.
+                    </li>
+                    <li>
+                        **Performance e Escalabilidade:** O .NET moderno é conhecido por seu alto desempenho e capacidade de construir sistemas escaláveis, o que é crucial para aplicações que precisam lidar com um grande volume de usuários e dados.
+                    </li>
+                    <li>
+                        **Comunidade Ativa e Suporte:** Possui uma comunidade global de desenvolvedores muito ativa, que contribui com recursos, resolve dúvidas e compartilha conhecimento. Além disso, conta com o suporte e a manutenção da Microsoft.
+                    </li>
+                    <li>
+                        **Multiplataforma:** A capacidade de desenvolver e rodar aplicações em Windows, Linux e macOS abre portas para um mercado de trabalho mais amplo e projetos diversos.
+                    </li>
                 </ul>
 
-                <h3>2.2. Tipos de Dados</h3>
-                <p>C# é uma linguagem **fortemente tipada**, o que significa que toda variável deve ter um tipo de dado definido. Os tipos de dados em C# são divididos em duas categorias principais:</p>
-
-                <h4>Tipos de Valor (Value Types)</h4>
-                <p>Armazenam diretamente seus valores na memória onde são declarados. São passados por valor (uma cópia do valor é usada).</p>
+                <h3>1.4. Habilidades Adquiridas ao Final do Estudo</h3>
+                <p>Ao concluir esta apostila e praticar os conceitos apresentados, você terá as seguintes habilidades:</p>
                 <ul>
-                    <li><strong>Inteiros:</strong> `byte`, `sbyte`, `short`, `ushort`, `int` (mais comum), `uint`, `long`, `ulong`</li>
-                    <li><strong>Ponto Flutuante:</strong> `float`, `double` (mais comum), `decimal` (para precisão financeira)</li>
-                    <li><strong>Caracteres:</strong> `char` (um único caractere Unicode)</li>
-                    <li><strong>Booleano:</strong> `bool` (`true` ou `false`)</li>
+                    <li>Compreender a arquitetura e o funcionamento da plataforma **.NET**.</li>
+                    <li>Dominar a **sintaxe básica da linguagem C#**, incluindo variáveis, tipos de dados e operadores.</li>
+                    <li>Implementar **estruturas de controle de fluxo** (condicionais e de repetição) para criar lógica de programa.</li>
+                    <li>Organizar o código de forma eficiente utilizando **namespaces, classes e métodos**.</li>
+                    <li>Trabalhar com **coleções de dados** como Arrays e Listas para gerenciar múltiplos valores.</li>
+                    <li>Escrever **código limpo, legível e manutenível**, seguindo boas práticas de programação.</li>
+                    <li>Entender a diferença entre **tipos de valor e tipos de referência** e realizar **conversões de tipo**.</li>
+                    <li>Implementar **tratamento de exceções** para tornar seus programas mais robustos e evitar falhas.</li>
+                    <li>Compreender e aplicar os **pilares da Programação Orientada a Objetos (POO)**: Abstração, Encapsulamento, Herança e Polimorfismo.</li>
+                    <li>Desenvolver uma **API Web básica** utilizando ASP.NET Core, entendendo os fundamentos de comunicação entre sistemas.</li>
+                    <li>Construir **pequenos projetos práticos** de console e web, aplicando os conhecimentos adquiridos.</li>
                 </ul>
-                <pre><code class="language-csharp">
-int idade = 30;
-double preco = 29.99;
-char inicial = 'J';
-bool ativo = true;
-decimal salario = 5500.75m; // Sufixo 'm' para decimal
-                </code></pre>
+                <p>Estas habilidades o(a) capacitarão a ingressar como um(a) desenvolvedor(a) júnior na área de tecnologia, abrindo caminho para o seu crescimento profissional.</p>
 
-                <h4>Tipos de Referência (Reference Types)</h4>
-                <p>Armazenam uma referência (endereço de memória) ao local onde o valor real está armazenado. São passados por referência (alterar o valor através de uma referência afeta o valor original).</p>
-                <ul>
-                    <li>`string`: Uma sequência de caracteres Unicode (ex: `"Olá Mundo!"`)</li>
-                    <li>`object`: O tipo base para todos os outros tipos em C#.</li>
-                    <li>Classes, Interfaces, Delegates, Arrays</li>
-                </ul>
-                <pre><code class="language-csharp">
-string nome = "Maria";
-object qualquerCoisa = 123;
-int[] numeros = {1, 2, 3}; // Array é um tipo de referência
-                </code></pre>
-
-                <h3>2.3. Tipos de Operadores</h3>
-                <p>Operadores são símbolos que dizem ao compilador para realizar manipulações matemáticas, lógicas ou de atribuição específicas.</p>
-
-                <h4>Operadores Aritméticos</h4>
-                <p>Usados para realizar operações matemáticas básicas.</p>
-                <ul>
-                    <li>`+` (Adição)</li>
-                    <li>`-` (Subtração)</li>
-                    <li>`*` (Multiplicação)</li>
-                    <li>`/` (Divisão)</li>
-                    <li>`%` (Módulo - resto da divisão)</li>
-                    <li>`++` (Incremento - adiciona 1)</li>
-                    <li>`--` (Decremento - subtrai 1)</li>
-                </ul>
-                <pre><code class="language-csharp">
-int a = 10, b = 3;
-int soma = a + b;     // 13
-int sub = a - b;      // 7
-int mult = a * b;     // 30
-double div = (double)a / b; // 3.333... (casting para double para divisão flutuante)
-int resto = a % b;    // 1
-a++; // a agora é 11
-b--; // b agora é 2
-                </code></pre>
-
-                <h4>Operadores de Atribuição</h4>
-                <p>Usados para atribuir valores a variáveis.</p>
-                <ul>
-                    <li>`=` (Atribuição simples)</li>
-                    <li>`+=` (Adicionar e atribuir: `x = x + y`)</li>
-                    <li>`-=` (Subtrair e atribuir: `x = x - y`)</li>
-                    <li>`*=` (Multiplicar e atribuir: `x = x * y`)</li>
-                    <li>`/=` (Dividir e atribuir: `x = x / y`)</li>
-                    <li>`%=` (Módulo e atribuir: `x = x % y`)</li>
-                </ul>
-                <pre><code class="language-csharp">
-int x = 5;
-x += 3; // x agora é 8
-x *= 2; // x agora é 16
-                </code></pre>
-
-                <h4>Operadores de Comparação (Relacionais)</h4>
-                <p>Usados para comparar dois valores e retornar um resultado booleano (`true` ou `false`).</p>
-                <ul>
-                    <li>`==` (Igual a)</li>
-                    <li>`!=` (Diferente de)</li>
-                    <li>`>` (Maior que)</li>
-                    <li>`<` (Menor que)</li>
-                    <li>`>=` (Maior ou igual a)</li>
-                    <li>`<=` (Menor ou igual a)</li>
-                </ul>
-                <pre><code class="language-csharp">
-int num1 = 10, num2 = 20;
-bool igual = (num1 == num2); // false
-bool maior = (num1 > num2);  // false
-bool menorOuIgual = (num1 <= num2); // true
-                </code></pre>
-
-                <h4>Operadores Lógicos</h4>
-                <p>Usados para combinar expressões booleanas.</p>
-                <ul>
-                    <li>`&&` (AND lógico - retorna `true` se ambas as expressões forem `true`)</li>
-                    <li>`||` (OR lógico - retorna `true` se pelo menos uma das expressões for `true`)</li>
-                    <li>`!` (NOT lógico - inverte o valor booleano)</li>
-                </ul>
-                <pre><code class="language-csharp">
-bool condicao1 = true;
-bool condicao2 = false;
-
-bool resultadoAnd = condicao1 && condicao2; // false
-bool resultadoOr = condicao1 || condicao2;  // true
-bool resultadoNot = !condicao1;          // false
-                </code></pre>
-
-                <h4>Operador Condicional (Ternário)</h4>
-                <p>Uma forma concisa de uma instrução `if-else` simples.</p>
-                <pre><code class="language-csharp">
-// sintaxe: condição ? valor_se_verdadeiro : valor_se_falso;
-int idade = 18;
-string status = (idade >= 18) ? "Maior de idade" : "Menor de idade"; // status é "Maior de idade"
-                </code></pre>
-                <h4>Bibliografia Recomendada:</h4>
-                <ul>
-                    <li>"C# 10 and .NET 6 – Modern Cross-Platform Development" por Mark J. Price</li>
-                    <li>Microsoft Docs C#: <a href="https://docs.microsoft.com/pt-br/dotnet/csharp/" target="_blank">docs.microsoft.com/pt-br/dotnet/csharp/</a></li>
-                </ul>
-            </section>
-
-            ---
-
-            <section id="estruturas-controle">
-                <h2>3. Estruturas de Controle e Repetição</h2>
-                <p>Estruturas de controle são essenciais para ditar o fluxo de execução de um programa, permitindo que você tome decisões e repita ações.</p>
-
-                <h3>3.1. Estruturas Condicionais (Decisão)</h3>
-                <ul>
-                    <li>`if`, `else if`, `else`: Executa blocos de código com base em condições.</li>
-                    <li>`switch`: Alternativa para múltiplas condições, mais legível para muitos casos.</li>
-                </ul>
-                <pre><code class="language-csharp">
-int hora = 15;
-if (hora &lt; 12)
-{
-    Console.WriteLine("Bom dia!");
-}
-else if (hora &lt; 18)
-{
-    Console.WriteLine("Boa tarde!");
-}
-else
-{
-    Console.WriteLine("Boa noite!");
-}
-
-char opcao = 'B';
-switch (opcao)
-{
-    case 'A':
-        Console.WriteLine("Opção A selecionada.");
-        break;
-    case 'B':
-        Console.WriteLine("Opção B selecionada.");
-        break;
-    default:
-        Console.WriteLine("Opção inválida.");
-        break;
-}
-                </code></pre>
-
-                <h3>3.2. Estruturas de Repetição (Laços/Loops)</h3>
-                <ul>
-                    <li>`for`: Usado quando o número de iterações é conhecido.</li>
-                    <li>`while`: Repete um bloco de código enquanto uma condição é verdadeira.</li>
-                    <li>`do-while`: Semelhante ao `while`, mas garante que o bloco de código seja executado pelo menos uma vez.</li>
-                    <li>`foreach`: Usado para iterar sobre coleções (arrays, listas, etc.).</li>
-                </ul>
-                <pre><code class="language-csharp">
-// For
-for (int i = 0; i &lt; 5; i++)
-{
-    Console.WriteLine($"Contagem For: {i}");
-}
-
-// While
-int j = 0;
-while (j &lt; 3)
-{
-    Console.WriteLine($"Contagem While: {j}");
-    j++;
-}
-
-// Do-While
-int k = 0;
-do
-{
-    Console.WriteLine($"Contagem Do-While: {k}");
-    k++;
-} while (k &lt; 2);
-
-// Foreach
-string[] frutas = { "Maçã", "Banana", "Uva" };
-foreach (string fruta in frutas)
-{
-    Console.WriteLine($"Fruta: {fruta}");
-}
-                </code></pre>
-                <h4>Bibliografia Recomendada:</h4>
-                <ul>
-                    <li>"Programming C# 8.0: Build Cloud, Web, and Desktop Applications" por Ian Griffiths</li>
-                    <li>Microsoft Learn - Fluxo de Controle: <a href="https://learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/flow-control" target="_blank">learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/flow-control</a></li>
-                </ul>
-            </section>
-
-            ---
-
-            <section id="organizacao-programa">
-                <h2>4. Organização de um Programa C#</h2>
-                <p>A organização de um programa C# é crucial para a manutenibilidade, escalabilidade e colaboração em projetos. Os conceitos-chave são **Namespaces**, **Classes** e **Métodos**.</p>
-
-                <h3>4.1. Namespaces</h3>
-                <p>Namespaces são usados para organizar o código e para evitar colisões de nomes. Eles fornecem um escopo hierárquico para tipos (classes, interfaces, structs, enums, delegates). A declaração `using` no topo de um arquivo permite usar tipos de um namespace sem qualificá-los completamente.</p>
-                <pre><code class="language-csharp">
-// Arquivo: MinhaAplicacao/Modelos/Produto.cs
-namespace MinhaAplicacao.Modelos
-{
-    public class Produto
-    {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-    }
-}
-
-// Arquivo: MinhaAplicacao/Servicos/CatalogoServico.cs
-using MinhaAplicacao.Modelos; // Importa o namespace
-using System; // Importa o namespace System
-
-namespace MinhaAplicacao.Servicos
-{
-    public class CatalogoServico
-    {
-        public void AdicionarProduto(Produto p)
-        {
-            Console.WriteLine($"Produto '{p.Nome}' adicionado ao catálogo.");
-        }
-    }
-}
-                </code></pre>
-
-                <h3>4.2. Classes e Métodos</h3>
-                <p>Um programa C# é fundamentalmente construído em torno de **classes**, que são modelos para criar **objetos**. **Métodos** são blocos de código que realizam uma tarefa específica dentro de uma classe.</p>
-                <pre><code class="language-csharp">
-// Classe
-public class Calculadora
-{
-    // Método
-    public int Somar(int num1, int num2)
-    {
-        return num1 + num2;
-    }
-
-    // Método estático (não precisa de uma instância da classe para ser chamado)
-    public static double Pi = 3.14159;
-
-    public static double CalcularAreaCirculo(double raio)
-    {
-        return Pi * raio * raio;
-    }
-}
-
-// Uso no método Main
-// Calculadora calc = new Calculadora();
-// int resultado = calc.Somar(5, 3); // Chamada de método de instância
-// Console.WriteLine(resultado); // Saída: 8
-
-// double area = Calculadora.CalcularAreaCirculo(2.5); // Chamada de método estático
-// Console.WriteLine(area); // Saída: 19.6349375
-                </code></pre>
-                <h4>Bibliografia Recomendada:</h4>
-                <ul>
-                    <li>"Adaptive Code via C#: Agile coding with design patterns and SOLID principles" por Gary McLean Hall</li>
-                    <li>Microsoft Learn - Organização do Código: <a href="https://learn.microsoft.com/pt-br/dotnet/csharp/fundamentals/program-structure/" target="_blank">learn.microsoft.com/pt-br/dotnet/csharp/fundamentals/program-structure/</a></li>
-                </ul>
-            </section>
-
-            ---
-
-            <section id="arrays-listas">
-                <h2>5. Array e Listas</h2>
-                <p>Arrays e Listas são estruturas de dados usadas para armazenar coleções de elementos. A principal diferença está na flexibilidade de tamanho.</p>
-
-                <h3>5.1. Arrays</h3>
-                <p>Um **Array** é uma coleção de elementos de um **mesmo tipo** e com um **tamanho fixo** definido no momento da criação. Os elementos são acessados por um índice numérico (baseado em zero).</p>
-                <pre><code class="language-csharp">
-// Declaração e inicialização de um array de inteiros
-int[] numeros = new int[5]; // Array de 5 posições (índices 0 a 4)
-
-// Atribuindo valores
-numeros[0] = 10;
-numeros[1] = 20;
-numeros[2] = 30;
-numeros[3] = 40;
-numeros[4] = 50;
-
-// Acessando valores
-Console.WriteLine($"Primeiro elemento: {numeros[0]}"); // Saída: 10
-Console.WriteLine($"Último elemento: {numeros[4]}"); // Saída: 50
-
-// Inicialização direta
-string[] nomes = { "Ana", "Bruno", "Carla" };
-Console.WriteLine($"Segundo nome: {nomes[1]}"); // Saída: Bruno
-
-// Iterando com for
-for (int i = 0; i &lt; nomes.Length; i++)
-{
-    Console.WriteLine($"Nome na posição {i}: {nomes[i]}");
-}
-                </code></pre>
-
-                <h3>5.2. Listas (`List<T>`)</h3>
-                <p>A classe `List<T>` (do namespace `System.Collections.Generic`) é uma coleção **dinâmica** e **flexível** que pode crescer ou encolher conforme necessário. É o tipo de coleção mais comumente usado em C#.</p>
-                <pre><code class="language-csharp">
-using System.Collections.Generic; // Necessário para usar List
-
-// Declaração e inicialização de uma lista de strings
-List&lt;string&gt; tarefas = new List&lt;string&gt;();
-
-// Adicionando elementos
-tarefas.Add("Comprar pão");
-tarefas.Add("Estudar C#");
-tarefas.Add("Fazer exercício");
-
-// Acessando elementos (ainda por índice)
-Console.WriteLine($"Primeira tarefa: {tarefas[0]}"); // Saída: Comprar pão
-
-// Removendo um elemento
-tarefas.Remove("Estudar C#");
-
-// Adicionando mais um elemento
-tarefas.Add("Pagar contas");
-
-// Contando elementos
-Console.WriteLine($"Total de tarefas: {tarefas.Count}"); // Saída: 3
-
-// Iterando com foreach
-foreach (string tarefa in tarefas)
-{
-    Console.WriteLine($"- {tarefa}");
-}
-                </code></pre>
-                <h4>Bibliografia Recomendada:</h4>
-                <ul>
-                    <li>"C# in a Nutshell" por Joseph Albahari e Ben Albahari (Capítulo sobre Coleções)</li>
-                    <li>Microsoft Learn - Coleções genéricas: <a href="https://learn.microsoft.com/pt-br/dotnet/standard/collections/generic-collections" target="_blank">learn.microsoft.com/pt-br/dotnet/standard/collections/generic-collections</a></li>
-                </ul>
-                <h4>Projeto para Treinar:</h4>
-                <p><strong>Gerenciador de Tarefas Simples (Console App):</strong> Crie um programa de console que permita ao usuário:</p>
+                <h3>1.5. Configurando o Ambiente de Desenvolvimento</h3>
+                <p>Antes de mergulharmos no código, precisamos configurar seu ambiente. A ferramenta principal será o **Visual Studio Code** ou o **Visual Studio Community** (versão gratuita e completa).</p>
+                <h4>Ferramentas Essenciais:</h4>
                 <ol>
-                    <li>Adicionar novas tarefas a uma `List<string>`.</li>
-                    <li>Listar todas as tarefas.</li>
-                    <li>Remover uma tarefa pelo nome ou número.</li>
-                    <li>Marcar uma tarefa como concluída (opcional, pode usar um `List<Tarefa>` onde `Tarefa` é uma classe com `string Descricao` e `bool Concluida`).</li>
+                    <li>
+                        **SDK do .NET:** O Software Development Kit (SDK) do .NET contém tudo o que você precisa para construir e executar aplicativos .NET, incluindo o runtime, bibliotecas e o compilador C#.
+                        <ul>
+                            <li>**Instalação:** Baixe a versão mais recente do .NET SDK no site oficial: <a href="https://dotnet.microsoft.com/download" target="_blank">dotnet.microsoft.com/download</a>. Siga as instruções para seu sistema operacional (Windows, macOS, Linux).</li>
+                            <li>**Verificação:** Após a instalação, abra o terminal (Prompt de Comando ou PowerShell no Windows, Terminal no Linux/macOS) e digite: `dotnet --version`. Se a versão for exibida, a instalação foi bem-sucedida.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        **Editor de Código (Recomendado):**
+                        <ul>
+                            <li>
+                                **Visual Studio Code (VS Code):** Leve, rápido e multiplataforma. É uma excelente escolha para iniciantes e profissionais.
+                                <ul>
+                                    <li>**Instalação:** Baixe em <a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a>.</li>
+                                    <li>**Extensões Essenciais:** Após instalar o VS Code, procure e instale as seguintes extensões:
+                                        <ul>
+                                            <li>**C# (Microsoft):** Essencial para obter IntelliSense, depuração e outras funcionalidades de C#.</li>
+                                            <li>**C# Dev Kit (Microsoft):** Conjunto de extensões para desenvolvimento C# mais robusto.</li>
+                                            <li>**Debugger for C# (Microsoft):** Para depuração de código.</li>
+                                            <li>**NuGet Package Manager (Fuad Alabsi):** Para gerenciar pacotes.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                **Visual Studio Community:** Uma IDE (Integrated Development Environment) completa e poderosa, exclusiva para Windows (com uma versão para Mac). É mais pesada que o VS Code, mas oferece uma experiência de desenvolvimento mais integrada para grandes projetos.
+                                <ul>
+                                    <li>**Instalação:** Baixe em <a href="https://visualstudio.microsoft.com/vs/community/" target="_blank">visualstudio.microsoft.com/vs/community/</a>. Durante a instalação, certifique-se de selecionar as cargas de trabalho ("workloads") de **"Desenvolvimento de desktop com .NET"** e **"Desenvolvimento web e ASP.NET"**.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                 </ol>
+                <h4>Criando seu Primeiro Projeto (Olá, Mundo!):</h4>
+                <p>Vamos criar seu primeiro projeto de console para testar a instalação. Abra seu terminal (ou o terminal integrado no VS Code):</p>
+                <pre><code class="language-bash">
+# Cria um novo diretório para seu projeto
+mkdir MeuPrimeiroPrograma
+cd MeuPrimeiroPrograma
+
+# Cria um novo projeto de console em C#
+dotnet new console
+
+# Restaura as dependências (geralmente automático)
+dotnet restore
+
+# Executa o programa
+dotnet run
+                </code></pre>
+                <p>Você deverá ver a saída "Hello, World!" no terminal. Isso significa que seu ambiente está configurado corretamente!</p>
+
+                ---
+                <h4>Resumo do Capítulo</h4>
+                <p>Neste capítulo, você foi introduzido à plataforma **.NET** e à linguagem **C#**, compreendendo sua evolução, importância no mercado de trabalho e as habilidades que você desenvolverá. Além disso, configuramos o ambiente de desenvolvimento, uma etapa crucial para começar a programar.</p>
+                <p>**Pontos-chave:**</p>
+                <ul>
+                    <li>**.NET** é um framework de desenvolvimento multiplataforma e de código aberto.</li>
+                    <li>**C#** é a principal linguagem do .NET, moderna e orientada a objetos.</li>
+                    <li>O mercado de trabalho tem alta demanda por desenvolvedores .NET/C#.</li>
+                    <li>A configuração do **SDK do .NET** e de um editor como **VS Code** ou **Visual Studio** é o primeiro passo prático.</li>
+                </ul>
             </section>
 
             ---
 
-            <section id="boas-praticas">
-                <h2>6. Comentários e Boas Práticas de Código</h2>
-                <p>Escrever código legível e manutenível é tão importante quanto escrever código funcional. Comentários e boas práticas são fundamentais para isso.</p>
+            <section id="csharp-inicio" class="chapter">
+                <h2>2. C# - Primeiros Passos: Sintaxe, Variáveis e Operadores</h2>
+                <p>Agora que seu ambiente está configurado, vamos mergulhar na sintaxe básica do C# e nos blocos de construção fundamentais de qualquer programa: **variáveis** e **operadores**.</p>
 
-                <h3>6.1. Comentários</h3>
-                <p>Comentários servem para explicar o porquê de certas decisões de código, a lógica complexa, ou para documentar a finalidade de classes, métodos e variáveis. Use-os com moderação, pois código auto-documentado é sempre preferível.</p>
-                <ul>
-                    <li>`//`: Comentário de uma única linha.</li>
-                    <li>`/* ... */`: Comentário de múltiplas linhas.</li>
-                    <li>`///`: Comentários XML para documentação (geram documentação automaticamente).</li>
-                </ul>
+                <h3>2.1. Estrutura de um Programa C#</h3>
+                <p>Todo programa C# tem uma estrutura básica. Vamos analisar o "Olá, Mundo!" gerado automaticamente:</p>
                 <pre><code class="language-csharp">
-// Este é um comentário de uma linha
-int contador = 0; // Inicializa o contador
+using System; // 1. Declaração de Namespace
 
-/*
- * Este é um comentário de múltiplas linhas.
- * Ele pode abranger várias linhas de código.
- */
-
-/// &lt;summary&gt;
-/// Este método calcula a soma de dois números inteiros.
-/// &lt;/summary&gt;
-/// &lt;param name="a"&gt;O primeiro número.&lt;/param&gt;
-/// &lt;param name="b"&gt;O segundo número.&lt;/param&gt;
-/// &lt;returns&gt;A soma dos dois números.&lt;/returns&gt;
-public int SomarNumeros(int a, int b)
+namespace MeuPrimeiroPrograma // 2. Namespace do Projeto
 {
-    return a + b;
+    class Program // 3. Definição da Classe
+    {
+        static void Main(string[] args) // 4. Método Principal (Ponto de Entrada)
+        {
+            Console.WriteLine("Olá, Mundo!"); // 5. Instrução Executável
+            Console.WriteLine("Bem-vindo ao C#!");
+        }
+    }
 }
                 </code></pre>
-
-                <h3>6.2. Boas Práticas</h3>
-                <ul>
-                    <li><strong>Nomenclatura Consistente:</strong>
+                <ol>
+                    <li>
+                        `using System;`: A palavra-chave `using` é usada para **importar namespaces**. Namespaces são coleções de classes e outros tipos organizados para evitar conflitos de nomes e agrupar funcionalidades relacionadas. `System` é um namespace fundamental que contém classes para operações básicas como entrada/saída (como `Console`).
+                    </li>
+                    <li>
+                        `namespace MeuPrimeiroPrograma`: Define um **namespace** para o seu próprio código. Isso ajuda a organizar seus projetos, especialmente quando eles crescem em tamanho e complexidade ou quando você usa bibliotecas de terceiros.
+                    </li>
+                    <li>
+                        `class Program`: Todo o código em C# reside dentro de uma **classe**. Classes são modelos para criar objetos (veremos mais sobre isso em POO). A classe `Program` é uma convenção comum para abrigar o método de entrada do aplicativo.
+                    </li>
+                    <li>
+                        `static void Main(string[] args)`: Este é o **método principal** ou "ponto de entrada" do seu programa. Quando você executa um aplicativo C#, o Common Language Runtime (CLR) procura e executa este método primeiro.
                         <ul>
-                            <li>**PascalCase** para classes, métodos, propriedades, interfaces, namespaces (`MinhaClasse`, `CalcularTotal`).</li>
-                            <li>**camelCase** para variáveis locais, parâmetros de método (`minhaVariavel`, `primeiroNome`).</li>
-                            <li>Use nomes descritivos: `quantidadeProdutos` em vez de `qtd`.</li>
+                            <li>`static`: Significa que você pode chamar este método sem criar uma instância da classe `Program`.</li>
+                            <li>`void`: Indica que o método não retorna nenhum valor.</li>
+                            <li>`Main`: O nome convencional para o método de entrada.</li>
+                            <li>`(string[] args)`: Permite que você passe argumentos de linha de comando para o seu programa.</li>
                         </ul>
                     </li>
-                    <li><strong>Código Limpo e Formatação:</strong>
+                    <li>
+                        `Console.WriteLine("Olá, Mundo!");`: Uma **instrução** que executa uma ação. `Console` é uma classe do namespace `System` que fornece métodos para entrada e saída de dados. `WriteLine` é um método que imprime uma linha de texto no console. Note o `;` (ponto e vírgula) ao final da instrução, que marca o seu término.
+                    </li>
+                </ol>
+
+                <h3>2.2. Variáveis e Tipos de Dados</h3>
+                <p>
+                    **Variáveis** são "contêineres" nomeados que armazenam dados na memória do computador. Em C#, cada variável deve ter um **tipo de dado** definido antes de ser usada. Isso é o que chamamos de linguagem **fortemente tipada**.
+                </p>
+                <h4>Sintaxe de Declaração de Variáveis:</h4>
+                <pre><code class="language-csharp">
+TipoDeDado nomeDaVariavel = valorInicial;
+                </code></pre>
+
+                <h4>Categorias de Tipos de Dados em C#:</h4>
+                <p>Os tipos de dados em C# são divididos em duas categorias principais, com diferenças importantes em como armazenam e manipulam dados na memória:</p>
+
+                <p><strong>1. Tipos de Valor (Value Types)</strong></p>
+                <p>
+                    Armazenam diretamente seus valores na memória onde são declarados (geralmente na pilha - "stack"). Quando você atribui um tipo de valor a outra variável, uma **cópia do valor** é feita.
+                </p>
+                <ul>
+                    <li>**Inteiros:** Armazenam números inteiros (positivos, negativos e zero).
                         <ul>
-                            <li>Use identação consistente (4 espaços é comum).</li>
-                            <li>Quebre linhas longas para melhorar a legibilidade.</li>
-                            <li>Evite blocos de código muito longos; quebre-os em métodos menores.</li>
+                            <li>`byte` (0 a 255)</li>
+                            <li>`sbyte` (-128 a 127)</li>
+                            <li>`short` (-32.768 a 32.767)</li>
+                            <li>`ushort` (0 a 65.535)</li>
+                            <li>`int` (o mais comum, aproximadamente ±2 bilhões)</li>
+                            <li>`uint` (0 a 4 bilhões)</li>
+                            <li>`long` (para números muito grandes, aproximadamente ±9 quintilhões)</li>
+                            <li>`ulong` (0 a 18 quintilhões)</li>
                         </ul>
                     </li>
-                    <li><strong>Princípio KISS (Keep It Simple, Stupid):</strong> Mantenha o código o mais simples possível.</li>
-                    <li><strong>Princípio DRY (Don't Repeat Yourself):</strong> Evite duplicação de código. Refatore para métodos ou classes reutilizáveis.</li>
-                    <li><strong>Variáveis Constantes:</strong> Use `const` para valores que não mudarão.</li>
-                    <li><strong>Tratamento de Erros:</strong> Use `try-catch` para lidar com exceções.</li>
-                    <li><strong>Uso de `var`:</strong> Use `var` (inferência de tipo) quando o tipo for óbvio, mas não abuse para não dificultar a leitura.</li>
-                </ul>
-                <pre><code class="language-csharp">
-// Boa prática: nomes descritivos, CamelCase para variáveis locais
-string nomeCompletoCliente = "João Silva";
-
-// Má prática: nome abreviado, sem clareza
-// string nc = "João Silva";
-
-// Boa prática: método conciso e claro
-public decimal CalcularPrecoFinal(decimal precoUnitario, int quantidade)
-{
-    return precoUnitario * quantidade;
-}
-
-// Má prática: um método com muitas responsabilidades
-// public void ProcessarPedidoCompleto(...) { /* ... */ }
-                </code></pre>
-                <h4>Bibliografia Recomendada:</h4>
-                <ul>
-                    <li>"Clean Code: A Handbook of Agile Software Craftsmanship" por Robert C. Martin (Aplicável a qualquer linguagem, incluindo C#)</li>
-                    <li>"The Pragmatic Programmer: Your Journey To Mastery" por David Thomas e Andrew Hunt</li>
-                </ul>
-            </section>
-
-            ---
-
-            <section id="manipulando-valores">
-                <h2>7. Manipulando Valores e Tipos</h2>
-                <p>Em C#, é importante entender como os valores são armazenados e manipulados, especialmente a diferença entre tipos de valor e tipos de referência, e como realizar conversões.</p>
-
-                <h3>7.1. Conversão de Tipos (Casting)</h3>
-                <p>Converter um tipo de dado para outro é chamado de **casting**. Pode ser implícito (automático, seguro) ou explícito (manual, pode causar perda de dados ou erros).</p>
-                <ul>
-                    <li><strong>Conversão Implícita:</strong> De um tipo menor para um tipo maior, sem perda de dados.</li>
-                    <li><strong>Conversão Explícita:</strong> De um tipo maior para um tipo menor, ou entre tipos incompatíveis, requer o operador de cast `()`.</li>
-                </ul>
-                <pre><code class="language-csharp">
-// Implícita
-int meuInt = 10;
-double meuDouble = meuInt; // int para double é implícita
-Console.WriteLine($"Implicit: {meuDouble}"); // Saída: 10
-
-// Explícita (possível perda de dados)
-double outroDouble = 9.87;
-int outroInt = (int)outroDouble; // double para int é explícita, perde a parte decimal
-Console.WriteLine($"Explicit: {outroInt}"); // Saída: 9
-
-// Conversão de String para Número (usando Parse ou TryParse)
-string strNumero = "123";
-int numeroConvertido = int.Parse(strNumero); // Pode lançar exceção se a string não for um número válido
-Console.WriteLine($"Parse: {numeroConvertido}");
-
-string strTexto = "abc";
-int num;
-bool sucesso = int.TryParse(strTexto, out num); // Mais seguro, retorna bool
-Console.WriteLine($"TryParse sucesso: {sucesso}, Valor: {num}"); // Saída: False, 0
-                </code></pre>
-
-                <h3>7.2. Nullable Types (Tipos Anuláveis)</h3>
-                <p>Tipos de valor (como `int`, `bool`, `double`) normalmente não podem ser `null`. Para permitir que eles armazenem `null`, você pode usar um tipo anulável, que é indicado com um `?` após o nome do tipo.</p>
-                <pre><code class="language-csharp">
-int? idadeOpcional = null; // int anulável
-double? temperatura = 25.5;
-
-if (idadeOpcional.HasValue)
-{
-    Console.WriteLine($"Idade: {idadeOpcional.Value}");
-}
-else
-{
-    Console.WriteLine("Idade não definida."); // Saída: Idade não definida.
-}
-
-// Operador de Coalescência Nula (??)
-// Retorna o valor da esquerda se não for null, caso contrário, retorna o da direita
-int idadeReal = idadeOpcional ?? 0; // idadeReal será 0 se idadeOpcional for null
-Console.WriteLine($"Idade real: {idadeReal}"); // Saída: 0
-
-string nomeOpcional = null;
-string nomeExibicao = nomeOpcional ?? "Visitante";
-Console.WriteLine($"Nome de exibição: {nomeExibicao}"); // Saída: Visitante
-                </code></pre>
-                <h4>Bibliografia Recomendada:</h4>
-                <ul>
-                    <li>Microsoft Docs - Conversão de Tipos: <a href="https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/types/casting-and-type-conversions" target="_blank">docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/types/casting-and-type-conversions</a></li>
-                    <li>"Pro C# 10 with .NET 6: Foundational Principles and Practices in Programming" por Andrew Troelsen e Phil Japikse</li>
-                </ul>
-            </section>
-
-            ---
-
-            <section id="excecoes-colecoes">
-                <h2>8. Exceções e Coleções</h2>
-                <p>Tratar erros e gerenciar grupos de dados de forma eficiente são aspectos cruciais no desenvolvimento.</p>
-
-                <h3>8.1. Tratamento de Exceções (`try-catch-finally`)</h3>
-                <p>Exceções são eventos que ocorrem durante a execução de um programa e que interrompem o fluxo normal do programa. O C# fornece um mecanismo robusto para lidar com elas usando blocos `try`, `catch` e `finally`.</p>
-                <ul>
-                    <li>`try`: Contém o código que pode gerar uma exceção.</li>
-                    <li>`catch`: Captura e lida com um tipo específico de exceção. Você pode ter múltiplos blocos `catch`.</li>
-                    <li>`finally`: Bloco de código que é executado sempre, independentemente de uma exceção ter ocorrido ou não. Útil para liberar recursos.</li>
-                </ul>
-                <pre><code class="language-csharp">
-try
-{
-    Console.Write("Digite um número: ");
-    string entrada = Console.ReadLine();
-    int numero = int.Parse(entrada); // Pode lançar FormatException
-
-    int resultado = 10 / numero; // Pode lançar DivideByZeroException
-    Console.WriteLine($"Resultado: {resultado}");
-}
-catch (FormatException ex)
-{
-    Console.WriteLine("Erro: Entrada inválida. Por favor, digite um número inteiro.");
-    Console.WriteLine($"Detalhe do erro: {ex.Message}");
-}
-catch (DivideByZeroException ex)
-{
-    Console.WriteLine("Erro: Não é possível dividir por zero.");
-    Console.WriteLine($"Detalhe do erro: {ex.Message}");
-}
-catch (Exception ex) // Catch genérico para qualquer outra exceção
-{
-    Console.WriteLine("Ocorreu um erro inesperado.");
-    Console.WriteLine($"Detalhe do erro: {ex.Message}");
-}
-finally
-{
-    Console.WriteLine("Fim da tentativa de operação.");
-}
-                </code></pre>
-
-                <h3>8.2. Coleções Avançadas</h3>
-                <p>Além de `Array` e `List<T>`, o .NET oferece outras coleções genéricas e não genéricas, cada uma com suas características e casos de uso ideais.</p>
-                <ul>
-                    <li>`Dictionary<TKey, TValue>`: Armazena pares de chave-valor. Acesso rápido por chave.</li>
-                    <li>`HashSet<T>`: Coleção de elementos únicos, otimizada para operações de adição, remoção e verificação de existência.</li>
-                    <li>`Queue<T>`: Coleção FIFO (First-In, First-Out).</li>
-                    <li>`Stack<T>`: Coleção LIFO (Last-In, First-Out).</li>
-                </ul>
-                <pre><code class="language-csharp">
-using System.Collections.Generic;
-
-// Dictionary
-Dictionary&lt;string, string&gt; capitais = new Dictionary&lt;string, string&gt;();
-capitais.Add("Brasil", "Brasília");
-capitais.Add("França", "Paris");
-Console.WriteLine($"Capital da França: {capitais["França"]}");
-
-if (capitais.ContainsKey("Alemanha"))
-{
-    Console.WriteLine($"Capital da Alemanha: {capitais["Alemanha"]}");
-}
-else
-{
-    Console.WriteLine("Alemanha não encontrada no dicionário.");
-}
-
-// HashSet
-HashSet&lt;int&gt; numerosUnicos = new HashSet&lt;int&gt;();
-numerosUnicos.Add(1);
-numerosUnicos.Add(2);
-numerosUnicos.Add(1); // Não adiciona, pois 1 já existe
-Console.WriteLine($"Total de números únicos: {numerosUnicos.Count}"); // Saída: 2
-
-// Queue
-Queue&lt;string&gt; filaAtendimento = new Queue&lt;string&gt;();
-filaAtendimento.Enqueue("Cliente A"); // Adiciona
-filaAtendimento.Enqueue("Cliente B");
-Console.WriteLine($"Próximo na fila: {filaAtendimento.Dequeue()}"); // Remove e retorna "Cliente A"
-
-// Stack
-Stack&lt;string&gt; historicoNavegacao = new Stack&lt;string&gt;();
-historicoNavegacao.Push("Página 1"); // Adiciona
-historicoNavegacao.Push("Página 2");
-Console.WriteLine($"Página anterior: {historicoNavegacao.Pop()}"); // Remove e retorna "Página 2"
-                </code></pre>
-                <h4>Bibliografia Recomendada:</h4>
-                <ul>
-                    <li>"C# 10 in a Nutshell: The Definitive Reference" por Joseph Albahari e Ben Albahari</li>
-                    <li>Microsoft Docs - Tratamento de Exceções: <a href="https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/try-catch-finally" target="_blank">docs.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/try-catch-finally</a></li>
-                    <li>Microsoft Docs - Tipos de Coleções: <a href="https://docs.microsoft.com/pt-br/dotnet/standard/collections/" target="_blank">docs.microsoft.com/pt-br/dotnet/standard/collections/</a></li>
-                </ul>
-                <h4>Projeto para Treinar:</h4>
-                <p><strong>Sistema de Inventário Simples (Console App):</strong></p>
-                <ul>
-                    <li>Use um `Dictionary<string, Produto>` para armazenar produtos, onde a chave é o ID do produto e o valor é um objeto `Produto`.</li>
-                    <li>A classe `Produto` deve ter propriedades como `Id`, `Nome`, `Preco`, `Estoque`.</li>
-                    <li>Implemente opções para adicionar, remover, listar (todos ou por ID) e atualizar o estoque de produtos.</li>
-                    <li>Utilize tratamento de exceções para lidar com entrada de dados inválida (ex: preço negativo, ID não encontrado) e IDs duplicados.</li>
-                </ul>
-            </section>
-
-            ---
-
-            <section id="oop">
-                <h2>9. POO com C#</h2>
-                <p>A POO é um paradigma de programação que organiza o design do software em torno de **objetos**, em vez de funções e lógica. C# é uma linguagem fortemente orientada a objetos.</p>
-                <p>As seções a seguir aprofundarão os pilares da POO.</p>
-            </section>
-
-            ---
-
-            <section id="introducao-abstracao-encapsulamento">
-                <h3>9.1. Introdução, Abstração e Encapsulamento</h3>
-                <ul>
-                    <li><strong>Abstração:</strong> Foca na exposição apenas das informações essenciais e relevantes para o usuário do objeto, escondendo os detalhes complexos de implementação. Define o que um objeto faz, e não como ele faz.</li>
-                    <li><strong>Encapsulamento:</strong> O processo de agrupar dados (propriedades) e métodos (funções) que operam sobre esses dados em uma única unidade (uma classe). Além disso, ele protege os dados internos de um objeto de acessos externos e modificações indesejadas, geralmente usando **modificadores de acesso** (`public`, `private`, `protected`).</li>
-                </ul>
-                <pre><code class="language-csharp">
-public class ContaBancaria // Abstrai uma conta, escondendo como o saldo é armazenado
-{
-    private decimal _saldo; // Encapsulamento: _saldo é privado, só pode ser acessado via métodos/propriedades
-
-    public string NumeroConta { get; private set; } // Propriedade com set privado
-
-    public ContaBancaria(string numero, decimal saldoInicial) // Construtor
-    {
-        NumeroConta = numero;
-        _saldo = saldoInicial;
-    }
-
-    public decimal GetSaldo() // Abstração: expõe o saldo, mas não como ele é gerenciado (Método)
-    {
-        return _saldo;
-    }
-
-    public void Depositar(decimal valor) // Método
-    {
-        if (valor > 0)
-        {
-            _saldo += valor;
-            Console.WriteLine($"Depósito de {valor:C} realizado. Novo saldo: {_saldo:C}");
-        }
-    }
-
-    public bool Sacar(decimal valor) // Método
-    {
-        if (valor > 0 && _saldo >= valor)
-        {
-            _saldo -= valor;
-            Console.WriteLine($"Saque de {valor:C} realizado. Novo saldo: {_saldo:C}");
-            return true;
-        }
-        Console.WriteLine("Saldo insuficiente ou valor inválido para saque.");
-        return false;
-    }
-}
-
-// Uso
-// ContaBancaria minhaConta = new ContaBancaria("12345-6", 1000.00m);
-// minhaConta.Depositar(200);
-// minhaConta.Sacar(500);
-// Console.WriteLine(minhaConta.GetSaldo()); // Saída: 700.00
-                </code></pre>
-            </section>
-
-            ---
-
-            <section id="heranca-polimorfismo">
-                <h3>9.2. Herança e Polimorfismo</h3>
-                <ul>
-                    <li><strong>Herança:</strong> Permite que uma classe (**classe derivada/filha**) herde propriedades e métodos de outra classe (**classe base/pai**). Isso promove a reutilização de código e estabelece uma relação "É UM" (Ex: Um `Carro` É UM `Veículo`).</li>
-                    <li><strong>Polimorfismo:</strong> Significa "muitas formas". Em POO, permite que objetos de diferentes classes derivadas sejam tratados como objetos de uma classe base. Isso é alcançado através de métodos virtuais/sobrescritos e interfaces.</li>
-                </ul>
-                <pre><code class="language-csharp">
-// Classe Base
-public class Animal
-{
-    public string Nome { get; set; } // Propriedade
-
-    public Animal(string nome) // Construtor
-    {
-        Nome = nome;
-    }
-
-    public virtual void EmitirSom() // Método virtual, pode ser sobrescrito
-    {
-        Console.WriteLine($"{Nome} faz um som.");
-    }
-}
-
-// Classe Derivada (Herança)
-public class Cachorro : Animal
-{
-    public Cachorro(string nome) : base(nome) { } // Chama o construtor da base
-
-    public override void EmitirSom() // Sobrescreve o método da classe base
-    {
-        Console.WriteLine($"{Nome} late: Au Au!");
-    }
-}
-
-// Outra Classe Derivada
-public class Gato : Animal
-{
-    public Gato(string nome) : base(nome) { }
-
-    public override void EmitirSom()
-    {
-        Console.WriteLine($"{Nome} mia: Miau!");
-    }
-}
-
-// Uso (Polimorfismo)
-// List&lt;Animal&gt; animais = new List&lt;Animal&gt;();
-// animais.Add(new Cachorro("Buddy"));
-// animais.Add(new Gato("Felix"));
-// animais.Add(new Animal("Pássaro")); // Pode ser uma instância direta da base
-
-// foreach (Animal animal in animais)
-// {
-//     animal.EmitirSom(); // Chamada polimórfica: o método correto é invocado em tempo de execução
-// }
-// Saída:
-// Buddy late: Au Au!
-// Felix mia: Miau!
-// Pássaro faz um som.
-                </code></pre>
-            </section>
-
-            ---
-
-            <section id="classes-abstrata-interfaces">
-                <h3>9.3. Classes Abstratas e Interfaces</h3>
-                <ul>
-                    <li><strong>Classes Abstratas:</strong> Não podem ser instanciadas diretamente e podem conter métodos abstratos (sem implementação) e métodos concretos. Servem como base para outras classes, definindo um contrato parcial.</li>
-                    <li><strong>Interfaces:</strong> Contratos que definem um conjunto de membros (métodos, propriedades, eventos) que uma classe deve implementar. Uma classe pode implementar múltiplas interfaces, permitindo polimorfismo sem herança de implementação.</li>
-                </ul>
-                <pre><code class="language-csharp">
-// Classe Abstrata
-public abstract class Forma
-{
-    public string Cor { get; set; } // Propriedade
-    public abstract double CalcularArea(); // Método abstrato, sem implementação aqui
-
-    public void Desenhar() // Método concreto
-    {
-        Console.WriteLine($"Desenhando forma de cor {Cor}");
-    }
-}
-
-// Interface
-public interface IMovivel
-{
-    void Mover(int x, int y); // Método
-}
-
-// Classe Concreta que herda de uma classe abstrata e implementa uma interface
-public class Circulo : Forma, IMovivel
-{
-    public double Raio { get; set; } // Propriedade
-
-    public override double CalcularArea() // Implementação do método abstrato
-    {
-        return Math.PI * Raio * Raio;
-    }
-
-    public void Mover(int x, int y) // Implementação do método da interface
-    {
-        Console.WriteLine($"Círculo movido para ({x}, {y})");
-    }
-}
-
-// Uso
-// Forma meuCirculo = new Circulo { Raio = 5, Cor = "Azul" };
-// Console.WriteLine($"Área do círculo: {meuCirculo.CalcularArea()}"); // Saída: 78.53...
-// meuCirculo.Desenhar(); // Saída: Desenhando forma de cor Azul
-
-// IMovivel objetoMovivel = meuCirculo as IMovivel;
-// if (objetoMovivel != null)
-// {
-//     objetoMovivel.Mover(10, 20); // Saída: Círculo movido para (10, 20)
-// }
-                </code></pre>
-                <h4>Bibliografia Recomendada:</h4>
-                <ul>
-                    <li>"Head First C#: A Learner's Guide to Real-World Programming with C# and .NET" por Andrew Stellman e Jennifer Greene</li>
-                    <li>"Design Patterns: Elements of Reusable Object-Oriented Software" por Erich Gamma et al. (Gang of Four) - Para um aprofundamento em padrões de design OO.</li>
-                </ul>
-                <h4>Projeto para Treinar:</h4>
-                <p><strong>Sistema de Gerenciamento de Biblioteca (Console App):</strong></p>
-                <ul>
-                    <li>Crie classes como `Livro`, `Revista`, `Usuario`.</li>
-                    <li>Use herança: `Livro` e `Revista` podem herdar de uma classe abstrata `ItemBiblioteca` com propriedades como `Titulo`, `AnoPublicacao`.</li>
-                    <li>Implemente interfaces: `IEmprestavel` para itens que podem ser emprestados (com métodos `Emprestar()` e `Devolver()`).</li>
-                    <li>Crie uma classe `Biblioteca` que use `List<ItemBiblioteca>` para armazenar itens e `List<Usuario>` para usuários.</li>
-                    <li>Implemente métodos na classe `Biblioteca` para adicionar/remover itens, emprestar/devolver itens, e listar todos os itens ou itens emprestados.</li>
-                </ul>
-            </section>
-
-            ---
-
-            <section id="api-intro">
-                <h2>10. Introdução a APIs (Application Programming Interfaces)</h2>
-                <p>Uma API é um conjunto de regras e definições que permite que diferentes softwares se comuniquem entre si. No contexto .NET, geralmente falamos de APIs Web (Web APIs), que são serviços HTTP que expõem dados e funcionalidades.</p>
-
-                <h3>10.1. O que é uma API?</h3>
-                <p>Pense em uma API como um "garçom" de um restaurante. Você (seu aplicativo) não vai até a cozinha (o banco de dados ou a lógica de negócio) para pegar a comida. Você faz um pedido ao garçom (a API), ele leva seu pedido, a cozinha prepara, e o garçom traz a comida de volta. O garçom padroniza como você faz os pedidos e o que você pode pedir.</p>
-                <p>Web APIs em .NET (com ASP.NET Core) são comumente RESTful, o que significa que elas seguem os princípios da arquitetura REST (Representational State Transfer), utilizando verbos HTTP (GET, POST, PUT, DELETE) para interagir com recursos.</p>
-
-                <h3>10.2. Conceitos-chave de APIs Web</h3>
-                <ul>
-                    <li><strong>Endpoint:</strong> Uma URL específica onde um recurso pode ser acessado (ex: `/api/produtos`, `/api/usuarios/1`).</li>
-                    <li><strong>Métodos HTTP (Verbos):</strong>
+                    <li>**Ponto Flutuante:** Armazenam números com casas decimais.
                         <ul>
-                            <li>`GET`: Solicitar dados de um recurso.</li>
-                            <li>`POST`: Criar um novo recurso.</li>
-                            <li>`PUT`: Atualizar um recurso existente.</li>
-                            <li>`DELETE`: Remover um recurso.</li>
+                            <li>`float` (precisão de 7 dígitos, sufixo `f` ou `F` é obrigatório: `3.14f`)</li>
+                            <li>`double` (o mais comum, precisão de 15-16 dígitos)</li>
+                            <li>`decimal` (alta precisão para cálculos financeiros, sufixo `m` ou `M` é obrigatório: `123.45m`)</li>
                         </ul>
                     </li>
-                    <li><strong>Requisição (Request):</strong> A mensagem enviada pelo cliente à API. Contém:
+                    <li>**Caracteres:**
                         <ul>
-                            <li>Método HTTP</li>
-                            <li>URL do Endpoint</li>
-                            <li>Cabeçalhos (Headers): metadados, autenticação, tipo de conteúdo.</li>
-                            <li>Corpo (Body): dados a serem enviados (ex: JSON para POST/PUT).</li>
+                            <li>`char` (um único caractere Unicode, entre aspas simples: `'A'`, `'7'`, `'@'`)</li>
                         </ul>
                     </li>
-                    <li><strong>Resposta (Response):</strong> A mensagem enviada pela API de volta ao cliente. Contém:
+                    <li>**Booleano:**
                         <ul>
-                            <li>Status Code: indica o sucesso ou falha da operação (ex: 200 OK, 201 Created, 404 Not Found, 500 Internal Server Error).</li>
-                            <li>Cabeçalhos (Headers).</li>
-                            <li>Corpo (Body): dados retornados (ex: JSON).</li>
+                            <li>`bool` (apenas dois valores: `true` ou `false`)</li>
                         </ul>
                     </li>
-                    <li><strong>JSON (JavaScript Object Notation):</strong> Formato de dados leve e legível por humanos, amplamente utilizado para troca de dados em APIs Web.</li>
                 </ul>
-
-                <h3>10.3. Criando uma API Simples em ASP.NET Core</h3>
-                <p>Um exemplo básico de um controller em ASP.NET Core para uma Web API:</p>
                 <pre><code class="language-csharp">
-// Exemplo de Controller em ASP.NET Core Web API
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-
-namespace MinhaPrimeiraApi.Controllers
-{
-    [ApiController] // Indica que esta classe é um controller de API
-    [Route("api/[controller]")] // Define a rota base para este controller (ex: /api/produtos)
-    public class ProdutosController : ControllerBase // Herda de ControllerBase para APIs sem View
-    {
-        private static List&lt;string&gt; _produtos = new List&lt;string&gt; { "Caderno", "Caneta", "Borracha" };
-
-        // GET /api/produtos
-        [HttpGet] // Atribui este método ao verbo HTTP GET
-        public ActionResult&lt;IEnumerable&lt;string&gt;&gt; Get()
-        {
-            return Ok(_produtos); // Retorna 200 OK com a lista de produtos
-        }
-
-        // GET /api/produtos/{id}
-        [HttpGet("{id}")] // Define que a rota aceita um parâmetro 'id'
-        public ActionResult&lt;string&gt; Get(int id)
-        {
-            if (id &lt; 0 || id &gt;= _produtos.Count)
-            {
-                return NotFound(); // Retorna 404 Not Found
-            }
-            return Ok(_produtos[id]); // Retorna 200 OK com o produto
-        }
-
-        // POST /api/produtos
-        [HttpPost] // Atribui este método ao verbo HTTP POST
-        public ActionResult&lt;string&gt; Post([FromBody] string novoProduto) // Recebe o produto no corpo da requisição
-        {
-            _produtos.Add(novoProduto);
-            // Retorna 201 Created e o local do novo recurso
-            return CreatedAtAction(nameof(Get), new { id = _produtos.Count - 1 }, novoProduto);
-        }
-
-        // PUT /api/produtos/{id}
-        [HttpPut("{id}")] // Atribui este método ao verbo HTTP PUT
-        public IActionResult Put(int id, [FromBody] string produtoAtualizado)
-        {
-            if (id &lt; 0 || id &gt;= _produtos.Count)
-            {
-                return NotFound();
-            }
-            _produtos[id] = produtoAtualizado;
-            return NoContent(); // Retorna 204 No Content (sucesso sem conteúdo)
-        }
-
-        // DELETE /api/produtos/{id}
-        [HttpDelete("{id}")] // Atribui este método ao verbo HTTP DELETE
-        public IActionResult Delete(int id)
-        {
-            if (id &lt; 0 || id &gt;= _produtos.Count)
-            {
-                return NotFound();
-            }
-            _produtos.RemoveAt(id);
-            return NoContent();
-        }
-    }
-}
+int idade = 30; // Tipo inteiro
+double peso = 75.5; // Tipo ponto flutuante de dupla precisão
+char primeiraLetra = 'C'; // Tipo caractere
+bool estudanteAtivo = true; // Tipo booleano
+decimal precoProduto = 199.99m; // Tipo decimal para precisão financeira
                 </code></pre>
-                <h4>Bibliografia Recomendada:</h4>
-                <ul>
-                    <li>"ASP.NET Core in Action" por Andrew Lock</li>
-                    <li>Microsoft Docs - ASP.NET Core Web API: <a href="https://docs.microsoft.com/pt-br/aspnet/core/web-api/" target="_blank">docs.microsoft.com/pt-br/aspnet/core/web-api/</a></li>
-                    <li>"RESTful Web Services" por Leonard Richardson e Sam Ruby</li>
-                </ul>
-                <h4>Projeto para Treinar:</h4>
-                <p><strong>API RESTful para Gerenciamento de Livros:</strong></p>
-                <ul>
-                    <li>Crie um projeto **ASP.NET Core Web API**.</li>
-                    <li>Defina uma classe `Livro` (Id, Titulo, Autor, AnoPublicacao).</li>
-                    <li>Crie um `LivrosController` com endpoints para:
-                        <ul>
-                            <li>`GET /api/livros`: Listar todos os livros.</li>
-                            <li>`GET /api/livros/{id}`: Obter um livro por ID.</li>
-                            <li>`POST /api/livros`: Adicionar um novo livro.</li>
-                            <li>`PUT /api/livros/{id}`: Atualizar um livro existente.</li>
-                            <li>`DELETE /api/livros/{id}`: Remover um livro.</li>
-                        </ul>
-                    </li>
-                    <li>Use uma `List<Livro>` estática para simular um banco de dados em memória inicialmente.</li>
-                    <li>Teste sua API usando ferramentas como Postman, Insomnia ou a interface Swagger/OpenAPI que o ASP.NET Core oferece por padrão.</li>
-                </ul>
-            </section>
-        </main>
-    </div>
 
-    <footer>
-        <p>&copy; 2025 Apostila .NET e C#</p>
-    </footer>
+                <p><strong>2. Tipos de Referência (Reference Types)</strong></p>
+                <p>
+                    Não armazenam o valor diretamente, mas sim uma **referência (endereço de memória)** para o local onde o valor real está armazenado (geralmente no "heap"). Quando você atribui um tipo de referência a outra variável, a referência é copiada, não o valor em si. Isso significa que ambas as variáveis apontarão para o **mesmo local de memória**.
+                </p>
+                <ul>
+                    <li>`string`: Uma sequência de caracteres Unicode (texto), entre aspas duplas: `"Olá, C#!"`, `"DIO Bootcamp"`.</li>
+                    <li>`object`: O tipo base para todos os outros tipos em C#. Qualquer tipo pode ser implicitamente convertido para `object`.</li>
+                    <li>Classes, Interfaces, Delegates, Arrays (sim, arrays são tipos de referência, mesmo que contenham tipos de valor!).</li>
+                </ul>
+                <pre><code class="language-csharp">
+string nomeCompleto = "Ana Paula Santos"; // Tipo string
+object valorGenerico = 123; // Tipo object pode armazenar qualquer coisa
+int[] meusNumeros = { 1, 2, 3 }; // Array de inteiros (tipo de referência)
+                </code></pre>
+                <p>
+                    A compreensão da diferença entre tipos de valor e tipos de referência é crucial para evitar comportamentos inesperados no seu código, especialmente ao passar variáveis para métodos.
+                </p>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
-</body>
-</html>
+                <h3>2.3. Operadores em C#</h3>
+                <p>
+                    Operadores são símbolos que dizem ao compilador para realizar manipulações específicas em valores ou variáveis.
+                </p>
+
+                <h4>a) Operadores Aritméticos</h4>
+                <p>Usados para realizar operações matemáticas básicas.</p>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Nome</th>
+                            <th>Exemplo</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>`+`</td>
+                            <td>Adição</td>
+                            <td>`int resultado = 5 + 3;`</td>
+                            <td>`8`</td>
+                        </tr>
+                        <tr>
+                            <td>`-`</td>
+                            <td>Subtração</td>
+                            <td>`int resultado = 10 - 4;`</td>
+                            <td>`6`</td>
+                        </tr>
+                        <tr>
+                            <td>`*`</td>
+                            <td>Multiplicação</td>
+                            <td>`int resultado = 2 * 6;`</td>
+                            <td>`12`</td>
+                        </tr>
+                        <tr>
+                            <td>`/`</td>
+                            <td>Divisão</td>
+                            <td>`double resultado = 10.0 / 3;`</td>
+                            <td>`3.333...`</td>
+                        </tr>
+                        <tr>
+                            <td>`%`</td>
+                            <td>Módulo (resto da divisão)</td>
+                            <td>`int resultado = 10 % 3;`</td>
+                            <td>`1`</td>
+                        </tr>
+                        <tr>
+                            <td>`++`</td>
+                            <td>Incremento (adiciona 1)</td>
+                            <td>`int x = 5; x++;`</td>
+                            <td>`x` agora é `6`</td>
+                        </tr>
+                        <tr>
+                            <td>`--`</td>
+                            <td>Decremento (subtrai 1)</td>
+                            <td>`int y = 8; y--;`</td>
+                            <td>`y` agora é `7`</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    **Observação sobre divisão:** A divisão de dois inteiros em C# sempre resulta em um inteiro (a parte fracionária é truncada). Para obter um resultado com casas decimais, um dos operandos deve ser de ponto flutuante (`double`, `float` ou `decimal`) ou você deve fazer um **casting** explícito.
+                </p>
+                <pre><code class="language-csharp">
+int num1 = 10;
+int num2 = 3;
+
+int divisaoInteira = num1 / num2; // Resultado: 3
+double divisaoFlutuante = (double)num1 / num2; // Resultado: 3.3333333333333335
+                </code></pre>
+
+                <h4>b) Operadores de Atribuição</h4>
+                <p>Usados para atribuir valores a variáveis. O mais básico é `=`, mas existem atalhos.</p>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Exemplo</th>
+                            <th>Equivalente a</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>`=`</td>
+                            <td>`int x = 10;`</td>
+                            <td>Atribuição simples</td>
+                        </tr>
+                        <tr>
+                            <td>`+=`</td>
+                            <td>`x += 5;`</td>
+                            <td>`x = x + 5;`</td>
+                        </tr>
+                        <tr>
+                            <td>`-=`</td>
+                            <td>`x -= 2;`</td>
+                            <td>`x = x - 2;`</td>
+                        </tr>
+                        <tr>
+                            <td>`*=`</td>
+                            <td>`x *= 3;`</td>
+                            <td>`x = x * 3;`</td>
+                        </tr>
+                        <tr>
+                            <td>`/=`</td>
+                            <td>`x /= 2;`</td>
+                            <td>`x = x / 2;`</td>
+                        </tr>
+                        <tr>
+                            <td>`%=`</td>
+                            <td>`x %= 4;`</td>
+                            <td>`x = x % 4;`</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>c) Operadores de Comparação (Relacionais)</h4>
+                <p>Usados para comparar dois valores e retornar um resultado booleano (`true` ou `false`).</p>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Nome</th>
+                            <th>Exemplo</th>
+                            <th>Resultado (se a=5, b=3)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>`==`</td>
+                            <td>Igual a</td>
+                            <td>`a == b`</td>
+                            <td>`false`</td>
+                        </tr>
+                        <tr>
+                            <td>`!=`</td>
+                            <td>Diferente de</td>
+                            <td>`a != b`</td>
+                            <td>`true`</td>
+                        </tr>
+                        <tr>
+                            <td>`>`</td>
+                            <td>Maior que</td>
+                            <td>`a > b`</td>
+                            <td>`true`</td>
+                        </tr>
+                        <tr>
+                            <td>`<`</td>
+                            <td>Menor que</td>
+                            <td>`a < b`</td>
+                            <td>`false`</td>
+                        </tr>
+                        <tr>
+                            <td>`>=`</td>
+                            <td>Maior ou igual a</td>
+                            <td>`a >= b`</td>
+                            <td>`true`</td>
+                        </tr>
+                        <tr>
+                            <td>`<=`</td>
+                            <td>Menor ou igual a</td>
+                            <td>`a <= b`</td>
+                            <td>`false`</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>d) Operadores Lógicos</h4>
+                <p>Usados para combinar ou modificar expressões booleanas.</p>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Nome</th>
+                            <th>Exemplo</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
