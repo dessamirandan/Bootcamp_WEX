@@ -1,11 +1,11 @@
 ﻿
 using System;
 using POO.Models;
-      //Pessoa pessoa1 = new Pessoa();
-      //pessoa1.Nome = "Andressa";
-     // pessoa1.Idade = 28;
+      Pessoa pessoa1 = new Pessoa();
+      pessoa1.Nome = "Andressa";
+      pessoa1.Idade = 28;
 
-      //pessoa1.Apresentar();
+      pessoa1.Apresentar();
 
       ContaCorrente c1 = new ContaCorrente(123, 1400);
       c1.Depositar(600);
