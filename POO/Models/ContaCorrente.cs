@@ -24,13 +24,13 @@ namespace POO.Models
             else
             {
                 Saldo -= ValorDeSaque;
-                Console.WriteLine($"Saque de {ValorDeSaque}, realizado com sucesso. Seu saldo é de {Saldo}");
+                Console.WriteLine($"Saque de R${ValorDeSaque}, realizado com sucesso. Seu saldo é de R${Saldo}");
             }
         }
         public void Depositar(decimal valorDeDeposito)
         {
             Saldo += valorDeDeposito;
-            Console.WriteLine($"Depósito de {valorDeDeposito}, realizado com sucesso. Seu saldo é de {Saldo}");
+            Console.WriteLine($"Depósito de R${valorDeDeposito}, realizado com sucesso. Seu saldo é de R${Saldo}");
 
         }
 
