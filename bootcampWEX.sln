@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeHospedagem", "Sist
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO", "POO\POO.csproj", "{C27FE721-43A3-4AEA-ADC3-C6D53A9ABDA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculoDeFrete", "CalculoDeFrete\CalculoDeFrete.csproj", "{34877975-98C3-4529-A338-809AB2F6294C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,18 @@ Global
 		{C27FE721-43A3-4AEA-ADC3-C6D53A9ABDA8}.Release|x64.Build.0 = Release|Any CPU
 		{C27FE721-43A3-4AEA-ADC3-C6D53A9ABDA8}.Release|x86.ActiveCfg = Release|Any CPU
 		{C27FE721-43A3-4AEA-ADC3-C6D53A9ABDA8}.Release|x86.Build.0 = Release|Any CPU
+		{34877975-98C3-4529-A338-809AB2F6294C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34877975-98C3-4529-A338-809AB2F6294C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34877975-98C3-4529-A338-809AB2F6294C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{34877975-98C3-4529-A338-809AB2F6294C}.Debug|x64.Build.0 = Debug|Any CPU
+		{34877975-98C3-4529-A338-809AB2F6294C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{34877975-98C3-4529-A338-809AB2F6294C}.Debug|x86.Build.0 = Debug|Any CPU
+		{34877975-98C3-4529-A338-809AB2F6294C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34877975-98C3-4529-A338-809AB2F6294C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34877975-98C3-4529-A338-809AB2F6294C}.Release|x64.ActiveCfg = Release|Any CPU
+		{34877975-98C3-4529-A338-809AB2F6294C}.Release|x64.Build.0 = Release|Any CPU
+		{34877975-98C3-4529-A338-809AB2F6294C}.Release|x86.ActiveCfg = Release|Any CPU
+		{34877975-98C3-4529-A338-809AB2F6294C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
